@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app_ui/screens/screens.dart';
-import 'package:flutter_news_app_ui/widgets/image_container.dart';
+import 'package:flutter_news_app_ui/Menu/screens/screens.dart';
+import 'package:flutter_news_app_ui/Menu/widgets/image_container.dart';
+import 'package:flutter_news_app_ui/Profile/drawer_page.dart';
 
 import '../models/article_model.dart';
 import '../widgets/bottom_nav_bar.dart';
@@ -11,7 +12,7 @@ class DiscoverScreen extends StatelessWidget {
   static const routeName = '/discover';
   @override
   Widget build(BuildContext context) {
-    List<String> tabs = ['Health', 'Politics', 'Art', 'Food', 'Science'];
+    List<String> tabs = ['Prestasi', 'Akademik', 'Olahraga', 'Seni', 'Programming'];
 
     return DefaultTabController(
       initialIndex: 0,
@@ -21,7 +22,9 @@ class DiscoverScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, DrawerPage.routeName);
+            },
             icon: const Icon(
               Icons.menu,
               color: Colors.black,
@@ -91,7 +94,7 @@ class _CategoryNews extends StatelessWidget {
                               height: 80,
                               margin: const EdgeInsets.all(10.0),
                               borderRadius: 5,
-                              imageUrl: articles[index].imageUrl,
+                              imageUrl: articles[index].imagePath,
                             ),
                             Expanded(
                               child: Column(
@@ -167,12 +170,12 @@ class _DiscoverNews extends StatelessWidget {
             'Discover',
             style: Theme.of(context)
                 .textTheme
-                .headline4!
+                .headlineMedium!
                 .copyWith(color: Colors.black, fontWeight: FontWeight.w900),
           ),
           const SizedBox(height: 5),
           Text(
-            'News from all over the world',
+            'News from Teknokrat University',
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: 20),

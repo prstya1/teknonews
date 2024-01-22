@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_news_app_ui/models/article_model.dart';
-import 'package:flutter_news_app_ui/screens/screens.dart';
-import 'package:flutter_news_app_ui/widgets/custom_tag.dart';
+import 'package:flutter_news_app_ui/Menu/models/article_model.dart';
+import 'package:flutter_news_app_ui/Menu/screens/screens.dart';
+import 'package:flutter_news_app_ui/Menu/widgets/custom_tag.dart';
+import 'package:flutter_news_app_ui/Profile/drawer_page.dart';
 
 import '../widgets/bottom_nav_bar.dart';
 import '../widgets/image_container.dart';
@@ -19,7 +20,10 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, DrawerPage.routeName);
+        
+          },
           icon: const Icon(
             Icons.menu,
             color: Colors.white,
@@ -72,7 +76,7 @@ class _BreakingNews extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Container(
                   width: MediaQuery.of(context).size.width * 0.5,
-                  margin: const EdgeInsets.only(right: 10),
+                  margin: EdgeInsets.only(right: 10),
                   child: InkWell(
                     onTap: () {
                       Navigator.pushNamed(
@@ -86,7 +90,7 @@ class _BreakingNews extends StatelessWidget {
                       children: [
                         ImageContainer(
                           width: MediaQuery.of(context).size.width * 0.5,
-                          imageUrl: articles[index].imageUrl,
+                          imageUrl: articles[index].imagePath,
                         ),
                         const SizedBox(height: 10),
                         Text(
@@ -125,6 +129,7 @@ class _NewsOfTheDay extends StatelessWidget {
   }) : super(key: key);
 
   final Article article;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +137,7 @@ class _NewsOfTheDay extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.45,
       width: double.infinity,
       padding: const EdgeInsets.all(20.0),
-      imageUrl: article.imageUrl,
+      imageUrl: article.imagePath,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,13 +154,20 @@ class _NewsOfTheDay extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
+
           Text(
             article.title,
             style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                 fontWeight: FontWeight.bold, height: 1.25, color: Colors.white),
           ),
-          TextButton(
-            onPressed: () {},
+          TextButton(            
+            onPressed: () {
+              Navigator.pushNamed(
+                        context,
+                        ArticleScreen.routeName,
+                        arguments: article,
+                      );
+            },
             style: TextButton.styleFrom(padding: EdgeInsets.zero),
             child: Row(
               children: [

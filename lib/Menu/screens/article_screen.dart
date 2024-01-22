@@ -13,7 +13,7 @@ class ArticleScreen extends StatelessWidget {
     final article = ModalRoute.of(context)!.settings.arguments as Article;
     return ImageContainer(
       width: double.infinity,
-      imageUrl: article.imageUrl,
+      imageUrl: article.imagePath,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
@@ -131,7 +131,7 @@ class _NewsBody extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ImageContainer(
                   width: MediaQuery.of(context).size.width * 0.42,
-                  imageUrl: article.imageUrl,
+                  imageUrl: article.imagePath,
                   margin: const EdgeInsets.only(right: 5.0, bottom: 5.0),
                 );
               })

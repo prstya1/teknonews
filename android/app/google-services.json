@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "780726668712",
+    "project_id": "teknonews-4e9b3",
+    "storage_bucket": "teknonews-4e9b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780726668712:android:24813a6e527aef002fe19d",
+        "android_client_info": {
+          "package_name": "com.example.flutter_news_app_ui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9uCU0IY_Ts2WaXhe8xWqCbUkRGodZ0Qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780726668712:android:5eda592d4def90292fe19d",
+        "android_client_info": {
+          "package_name": "com.example.rive_animation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9uCU0IY_Ts2WaXhe8xWqCbUkRGodZ0Qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780726668712:android:af35ff0d08a0ee742fe19d",
+        "android_client_info": {
+          "package_name": "com.example.tekno_news"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9uCU0IY_Ts2WaXhe8xWqCbUkRGodZ0Qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780726668712:android:f87ffe297c3ec27c2fe19d",
+        "android_client_info": {
+          "package_name": "tekno.com.tekno_news"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9uCU0IY_Ts2WaXhe8xWqCbUkRGodZ0Qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
